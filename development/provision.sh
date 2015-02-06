@@ -7,21 +7,19 @@ apt-get -yqqf upgrade
 # Git
 command -v git > /dev/null
 if [ $? -ne 0 ]; then
-    echo "Installing Git"
-    apt-get -yqq install git
-fi
-
-# Pip
-command -v pip > /dev/null
-if [ $? -ne 0 ]; then
-    echo "Installing Pip"
-    apt-get -yqq install python-pip
+  echo "Installing Git"
+  apt-get -yqq install git
 fi
 
 # Build Essentials
 echo "Installing Build Essentials"
 sudo apt-get install build-essential python-dev libmysqlclient-dev
 
-# Flask
-echo "Installing Flask"
-pip install flask
+# Pip
+command -v pip > /dev/null
+if [ $? -ne 0 ]; then
+  echo "Installing Pip"
+  apt-get -yqq install python-pip
+fi
+
+cd /vagrant
