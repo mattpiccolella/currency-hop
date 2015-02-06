@@ -1,0 +1,6 @@
+*.sql
+*.pyc
+#*
+*~
+venv
+.vagrant
