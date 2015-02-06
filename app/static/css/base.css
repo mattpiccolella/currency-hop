@@ -2,6 +2,10 @@ html, body, .row, .large-8, #map-canvas {
   height: 100%; 
 }
 
-.large-4 {
-  widh
+#map-canvas img {
+  max-width: none;
+}
+
+li form {
+  min-width: 300px;
 }
