@@ -29,9 +29,38 @@
     });
   });
   </script>
+  <style>
+    body {
+      font: 10px sans-serif;
+    }
+
+    .axis path,
+    .axis line {
+      fill: none;
+      stroke: #000;
+      shape-rendering: crispEdges;
+    }
+
+    .grid path,
+    .grid line {
+      fill: none;
+      stroke: rgba(0, 0, 0, 0.25);
+      shape-rendering: crispEdges;
+    }
+
+    .x.axis path {
+      display: none;
+    }
+
+    .line {
+      fill: none;
+      stroke-width: 2.5px;
+    }
+  </style>
 {% endblock %}
 
 {% block body %}
+  <script src="http://d3js.org/d3.v3.js"></script>
   <nav class="top-bar" data-topbar role="navigation">
     <ul class="title-area">
       <li class="name">
@@ -74,15 +103,21 @@
     </section>
   </nav>
   <div class="row max-width">
-    <div class="large-8 columns">
+    <div class="large-6 columns">
       <div id="map-canvas"></div>
     </div>
-    <div class="large-4 columns">
+    <div class="large-6 columns">
       <div id="statplot" class="large-12 columns">
         <h2 id="chartTitle"></h2>
+        <div class="large-12 columns" id="chart">
+        </div>
+        <div class="large-12 columns" id="measures">
+        </div>
       </div>
       <div id="cities" class="large-12 columns">
         <h2 id="countryName"></h2>
+        <div class="large-12 columns" id="city-names">
+        </div>
       </div>
     </div>
   </div>
