@@ -17,3 +17,7 @@ li form {
 .top_bar_text {
   color: white;
 }
+
+.max-width {
+  max-width: none;
+}
