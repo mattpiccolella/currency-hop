@@ -10,6 +10,10 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/foundation.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
 
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+
     <script src="{{ url_for('static', filename='js/vendor/modernizr.js') }}"></script>
 
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key={{config.MAPS_API_KEY}}">
@@ -19,7 +23,6 @@
   <body>
     {% block body %}{% endblock %}
 
-    <script src="{{ url_for('static', filename='js/vendor/jquery.js') }}"></script>
     <script src="{{ url_for('static', filename='js/foundation.min.js') }}"></script>
     <script>
       $(document).foundation();

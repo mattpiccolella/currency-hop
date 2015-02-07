@@ -9,3 +9,11 @@ html, body, .row, .large-8, #map-canvas {
 li form {
   min-width: 300px;
 }
+
+.top_bar_select {
+  padding-top:3px;
+}
+
+.top_bar_text {
+  color: white;
+}
