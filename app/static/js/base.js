@@ -1,4 +1,4 @@
-var HOST = "http://localhost:5000/";
+var HOST = "http://travelrscheck.com/";
 var map;
 var markers = [];
 function initialize() {
@@ -80,7 +80,7 @@ function getAdviceMessage(percentile,to_curr) {
     return "The time is ripe! Pack your bags for " + to_curr + "!";
   } else if (percentile >= 70) {
     return "You may want to consider going to " + to_curr + " soon. The economic conditions are favorable.";
-  } else if (percentitle >= 40) {
+  } else if (percentile >= 40) {
     return "It's not looking super hot. I'd consider waiting";
   } else {
     return "Steer clear. Your money is no good here.";
