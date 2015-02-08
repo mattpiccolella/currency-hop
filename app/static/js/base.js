@@ -90,10 +90,10 @@ function getAdviceMessage(percentile,to_curr) {
 function getToCurrencyCode(toCurrencyString) {
   var words = toCurrencyString.split(' ');
   if (words.length > 1) {
-    var init = words[1].indexOf('(');
-    var fin = words[1].indexOf(')');
+    var init = words[words.length-1].indexOf('(');
+    var fin = words[words.length-1].indexOf(')');
     if ((init >= 0) && (fin > 0)) {
-      return words[1].substr(init+1,fin-init-1)
+      return words[words.length-1].substr(init+1,fin-init-1)
     } else {
       return null;
     }
@@ -103,7 +103,7 @@ function getToCurrencyCode(toCurrencyString) {
 }
 
 function getToCurrencyCity(toCurrencyString) {
-  return toCurrencyString.split(' ')[0];
+  return toCurrencyString.split('(')[0];
 }
 
 function timeSeriesString(toCurr, fromCurr) {
